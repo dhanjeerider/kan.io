@@ -1,0 +1,1083 @@
+
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'/>
+
+ <style>
+     
+ .prx{
+ scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;}    
+ .prx .card{
+ margin: 30px auto;
+     padding: 20px;
+    border-radius: 11px;
+    min-width: 270px;
+    text-align: center;
+    line-height: 1.6em;
+    background: var(--scndrybg);
+    scroll-snap-align: center;
+    
+ }
+ .prx .card:hover{
+ transition: background .5s ease-out;
+ background: var(--grdt);
+color: white; 
+}
+
+ 
+.prx a{
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  color: white;
+  background: var(--voilet);
+  text-decoration: none;
+ border: 1px solid var(--scndry);   
+    
+}
+
+
+
+ .prx a:hover{
+ 
+ color: white;
+ }
+  .prx .card img{
+  width: 60px;
+  margin: 20px auto;
+ }
+  .card h3{
+  margin: 10px auto;
+      text-transform: capitalize;
+      font-weight: bold;
+      
+  }
+  
+ </style>  
+ 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+<style>
+:root{
+ --bg:#ffffff;
+ --primary:#0d6efd;
+ --voilet:#6610f2;
+ --txt:#a3abc3;
+ --scndry:#ccc;
+ --scndrybg:#f8f9fa;
+ --ast:royalblue;
+ --grdt:linear-gradient(to right, #0096ff,#00a871);
+}
+body{margin: 0;background: var(--bg);}
+
+.hero-section {
+    margin: 0;
+   
+    font-family: 'Arial', sans-serif;
+    background-color: #02032e;
+    color: #fff;
+}
+main{padding: 20px;}
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 20px 20px;
+    background: linear-gradient(to left, #0b042f, #1b0863, #0b042f);
+    overflow: hidden;
+  /*  background: url('https://img.freepik.com/free-vector/gradient-blue-background_23-2149333533.jpg?w=740&t=st=1725013586~exp=1725014186~hmac=b978a1130be39b6532b6f19796a98a87ff6335a362d2e0737e155105114b341a');
+    background-attachment: fixed;
+    background-size: cover;*/
+}
+
+.headline {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: Prompt;
+    letter-spacing:
+-1.54px
+transition: all .5s ease;
+
+}
+
+.subheadline {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+    font-size: 1em;
+    font-family: Open Sans, Sans-serif;
+    line-height: 1.6em;
+    padding: 4px 22px;
+}
+
+.cta-button {
+    padding: 15px 33px;
+    background-color: #5000ff;
+    color: #fff;
+    border: none;
+    border-radius: 44px;
+    cursor: pointer;
+    font-size: 14px;
+    
+    font-weight: 600;
+    font-size: 1em;
+    text-decoration: none;
+    font-family: prompt;    
+}
+.playbtn svg{padding: 10px;
+    background: linear-gradient(to right, #0096ff,#00a871);
+    border-radius: 40px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    width:52px;
+    height: 52px;
+    
+    }
+   
+    .btnct{display:flex;gap:10px;justify-content:center;gap:20px;flex-wrap:wrap; margin-bottom: 15px;}
+.cta-button:hover {
+    background-color: #4a5075;
+}
+
+.rocket-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.rocket-icons .icon {
+    width: 40px;
+    height: auto;
+}
+
+.rocket-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.rocket {
+    position: absolute;
+    bottom: 3px;
+    left: -23%;
+    width: 120px;
+    
+    animation: rocketAnimation 4s infinite linear;
+}
+
+.partners-section {
+    background-color: #f89f29;
+    text-align: center;
+    padding: 20px;
+    color: #02032e;
+    font-size: 14px;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.partners-logos img {
+    width: 60px;
+    height: auto;
+}
+
+
+.lux{display: inline-block;
+margin: auto;
+    font-size: 12px;
+    font-weight: 600;
+    background: rgba(235, 235, 235, .1);
+    border-radius: 25px;
+    border:1px solid #696973;
+    padding: 6px 15px;
+    font-family: prompt;
+    color: white;
+    backdrop-filter:blur(6px);
+}
+.lux img{width: 13px;}
+@keyframes pulse { 	0% { 		box-shadow: 0 0 0 0 rgba(230, 235, 234, 0.3); 	} 	80% { 		box-shadow: 0 0 0 15px rgba(0, 130, 204, 0); 	} }
+
+    
+.offer-card {
+
+    background: linear-gradient(135deg, royalblue, #6500ff);
+    max-width: 500px;
+    color: white;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timer {
+    font-size: 2.4rem;
+    margin: 20px 0;
+    font-weight: bolder;
+    font-family: prompt;
+   letter-spacing:5px}
+
+.claim-button {
+    background: none;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: 1px solid whitesmoke;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover,.claim-button:hover {
+    background: linear-gradient(to right, #0096ff,#00a871);
+}
+
+
+.intro{
+   text-align: center;    
+}
+.intro h2{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.6em;
+}
+.intro h3{
+  font-weight: 400;  
+}
+.intro p{
+    color: gr;
+}
+
+.partner{text-align: center;}
+
+/* clsss effect */
+
+.pad{padding: 10px;}
+
+.flex{display:flex;gap:10px;justify-content:space-around;gap:10px;flex-wrap: nowrap;overflow: auto;}
+.flex img{
+    width: 120px;
+    
+    height: auto;
+}
+.flex img:hover{filter: saturate(1.3);}
+
+.ctt2{border-bottom: 1px solid gray;
+border-top: 1px solid gray;
+width: max-content;display:flex;justify-content:center;flex-wrap:wrap;margin: auto;
+padding-bottom: 30px; 
+margin-top: -30p;
+}
+.gold{font-family: prompt;font-weight: 500;font-size: 26px;
+   background: linear-gradient(90deg, red 20%, yellow 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+}
+.goli{font-family: prompt;font-weight: 500;font-size: 26px;
+   background: linear-gradient(90deg, green 20%, cyan 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent; 
+}
+
+.cpt{font-size: 12px; margin-top:-10px;}
+.ctt2 div{
+    padding: 5px;
+    text-align: center;    
+}
+.offer-card h2,.text{font-family: prompt; font-size: 33px; font-weight: bold; 
+background: linear-gradient(45deg, #FFFFFF 40%, gray 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.olele{font-family: prompt;font-weight: 500;font-size: 26px;
+   background: linear-gradient(90deg, red 20%, crimson 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+ 
+}
+ .services {
+            margin-top: 40px;
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .service-item {
+            background-color: var(--scndrybg);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e9ecef;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .service-item h3 {
+            margin-bottom: 10px;
+        }
+        .service-item p {
+            margin-bottom: 15px;
+        }
+        .view-details {
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+          .view-details:hover {
+           background: var(--grdt);
+            color:white; padding: 6px; 
+            border-radius: 5px;
+            transition: .3s ease;}
+          
+          footer{
+              padding: 30px 20px;
+              background: var(--bg-primary);
+             
+          } 
+            footer ul{margin: 0;list-style: none; padding:0;}
+            
+ footer a{color: black;text-decoration: none;font-size: .9em; }   
+ footer .rts-footer__widget--column{
+     margin-bottom: 30px;
+ }         
+ .rts-about p{font-size :.9m;} 
+ 
+ .scn {
+    width: 100%;
+   
+    box-sizing: border-box;
+ padding: 60px 2px;
+}
+
+.cardm {
+    position: relative;
+    max-width: 300px;
+    height: auto;
+    background: linear-gradient(-45deg, #fe0847, #feae3f);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    overflow: hidden;
+   margin: 20px auto;
+}
+
+.cardm:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.col-sm-4:nth-child(1) .cardm,
+.col-sm-4:nth-child(1) .cardm .tls .fa {
+    background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+
+.col-sm-4:nth-child(2) .cardm,
+.col-sm-4:nth-child(2) .cardm .tls .fa {
+    background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+
+.col-sm-4:nth-child(3) .cardm,
+.col-sm-4:nth-child(3) .cardm .tls .fa {
+    background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+.cardm:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: rgba(255, 255, 255, .1);
+    z-index: 1;
+    transform: skewY(-5deg) scale(1.5);
+    -webkit-transform: skewY(-5deg) scale(1.5);
+    -moz-transform: skewY(-5deg) scale(1.5);
+    -ms-transform: skewY(-5deg) scale(1.5);
+    -o-transform: skewY(-5deg) scale(1.5);
+}
+
+.tls .fa {
+    color: #fff;
+    font-size: 60px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+}
+
+.tls h2 {
+    position: relative;
+    margin: 20px 0 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.price {
+    position: relative;
+    z-index: 2;
+}
+
+.price h4 {
+    margin: 0;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 40px;
+}
+
+.option {
+    position: relative;
+    z-index: 2;
+}
+
+.option ul {
+    margin: 0;
+    padding: 0;
+}
+
+.option ul li {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.cardm a {
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    color: #262626;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
+    display: block;
+    text-align: center;
+    margin: 20px auto 0;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration:none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.cardm a:hover {
+    text-decoration: none;
+} 
+.btn a{text-decoration:none;}      
+
+.container,main,footer,.hero-section{max-width: 1200px;}
+.flex .card:hover{
+    transform: translateY(-6px);
+    transition: .4s ease;
+}
+.flex .card{
+    margin-top: 10px;
+}
+</style>    
+ 
+     <div class="hero-section">
+    <div class="container">
+        
+       <H1 class="headline gold fs-1 fw-bold  border rounded-pill p-1">RyteHost</h1> 
+        <h2 class="headline">Fastest Performance Web Hosting.
+
+
+</h2>
+
+
+<p class="lux"><span><img src="buchi.webp" alt="buchi"></span> make your website  superfast </p>
+        <p class="subheadline">RyteHost is a cheap domain and hosting provider, offering reliable services since 2023. They ensure 99.9% uptime and provide 365 days.</p>
+     
+ <img src="https://ihost.eco/content/uploads/2024/05/xrocketship.webp.pagespeed.ic.TGJFEpoKYb.webp" alt="Rocket" class="rocket" />     
+       
+   <div class="btnct">   <a class="cta-button" href="https://rytehost.net/client/index.php/store/shared-hosting">Get started</a>
+        <span class="playbtn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+	<path fill="currentColor" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128" />
+</svg></span>
+      
+       </div>  
+       
+             
+        
+               
+    </div>
+  <br />  
+  
+</div>
+
+
+
+
+<!-- 2 -->
+<div class="hero-section">
+      <div class="ctt2">
+    
+   <div>
+       <p class="text">99.9<span class="goli">%</span></p>
+       <p class="cpt">up time</p>
+   </div> 
+   
+    <div>
+       <p class="text">1<span class="gold">k</span></p>
+       <p class="cpt">Hosted website</p>
+   </div> 
+    <div>
+       <p class="text">9Gb<span class="olele">+</span></p>
+       <p class="cpt">Ddoss protected</p>
+   </div> 
+    
+</div>
+
+
+
+<div class="offer-card">
+        <h2>Get 30%off in cloud hosting</h2>
+        <div id="timer" class="timer">05:00</div>
+        <button class="claim-button">Claim Your Offer</button>
+    </div>
+
+
+</div>
+
+<main class="container">
+<div class="intro border-bottom">
+  <h2>Hosting solutions trusted by the owners of 30,000 + websites since 2020.</h2> 
+  <h3>Rated Excellent on 12+ Platforms
+</h3> 
+<p>with up to 99.8% satisfaction</p>
+<h2 class="border-bottom d-inline-flex" >Our Partners
+</h2>
+
+<div class="flex gap-4">
+ <img src="cloudflare.svg" alt="logo"> 
+   <img src="gcp.svg" alt="logo"> 
+   <img src="lin.svg" alt="logo"> 
+   <img src="razorpay-icon.svg" alt="logo"> 
+   <img src="softaculous.png" alt="logo"> 
+ 
+   
+</div>
+
+
+</div>
+
+
+<div>
+    
+    <br /><br /><br />
+    <h2>We Have Perfect Web Hosting Package for You</h2>
+  <p>We offer a wide range of cloud hosting solutions to give businesses and individuals the flexibility and choice in how websites are hosted</p> 
+<div>
+    
+  <div class="flex prx">
+
+
+
+
+
+<div class="card">
+<div><img class="w-50" src="https://i.postimg.cc/SRqKJvfC/cloud-server-3d-icon-download-in-png-blend-fbx-gltf-file-formats-storage-computing-database-hosting.webp" alt="" /></div>
+<h3>Premium hosting </h3>
+<p>The perfect package for everyone. Ideal for WordPress Blogs, Business or portfolio websites.</p>
+<a href="/premium-cloud/">View Details </a></div>
+ 
+<div class="card">
+<div><img class="w-50" src="https://cdn3d.iconscout.com/3d/premium/thumb/dedicated-server-3d-icon-download-in-png-blend-fbx-gltf-file-formats--hosting-cloud-servers-cybersecurity-pack-crime-security-icons-5559303.png" alt="" /></div>
+<h3>Dedicated server</h3>
+<p>Dedicated Bare Metal Servers with dedicated hardware, full root access and single tenant network.</p>
+<a href="/dedicated-servers/">View Details </a></div>
+
+<div class="card">
+<div><img class="w-50 p-3" src="https://cdn3d.iconscout.com/3d/premium/thumb/server-disconnect-3d-icon-download-in-png-blend-fbx-gltf-file-formats--dedicated-not-connected-unreachable-no-connection-database-empty-state-pack-miscellaneous-icons-5526122.png" alt="" /></div>
+<h3>elite cloud</h3>
+<p>The perfect package for hosting ecommerce websites, high traffic blogs or multiple websites together.</p>
+<a href="/elite-cloud/">View Details </a></div>
+ 
+<div class="card">
+<div><img class="w-50" src="https://cdn3d.iconscout.com/3d/premium/thumb/hosting-3d-icon-download-in-png-blend-fbx-gltf-file-formats--protection-shield-safe-secure-security-big-data-science-pack-network-communication-icons-7915308.png" alt="" /></div>
+<h3>Public Cloud</h3>
+<p>The beginner and budget friendly package for hosting single page websites, personal portfolios, etc.</p>
+<a href="/public-cloud/">View Details </a></div>
+
+<div class="card">
+<div><img class="w-50" src="https://cdn3d.iconscout.com/3d/premium/thumb/hosting-3d-icon-download-in-png-blend-fbx-gltf-file-formats--protection-shield-safe-secure-security-big-data-science-pack-network-communication-icons-7915308.png" alt="" /></div>
+<h3>Cloud VPS</h3>
+<p>Managed Cloud VPS packages with KVM virtualization with Dedicated Resources and Dedicated IP address.</p>
+<a href="/cloud-vps/">View Details </a></div>
+ 
+<div class="card">
+<div><img class="w-50" src="https://cdn3d.iconscout.com/3d/premium/thumb/hosting-3d-icon-download-in-png-blend-fbx-gltf-file-formats--protection-shield-safe-secure-security-big-data-science-pack-network-communication-icons-7915308.png" alt="" /></div>
+<h3>Email Hosting</h3>
+<p>Business Email Hosting Package for effective and professional email communication with your customers.</p>
+<a href="/email-hosting/">View Details </a></div>
+
+<div class="card">
+<div><img class="w-50" src="https://cdn3d.iconscout.com/3d/premium/thumb/hosting-3d-icon-download-in-png-blend-fbx-gltf-file-formats--protection-shield-safe-secure-security-big-data-science-pack-network-communication-icons-7915308.png" alt="" /></div>
+<h3>Reseller Hosting</h3>
+<p>The Ideal package to start your own web hosting company or web hosting agency with minimum investments.</p>
+<a href="/reseller-hosting/">View Details </a></div>
+ 
+
+</div>
+
+
+
+<section class="services">
+            <h2>Fastest Performance Web Hosting</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Touch the success! Domain and Secure Web Hosting from ₹45 per month.</p>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>CPanel Control Panel
+
+</h3>
+                    <p>We Provide Most User Friendly Panel For Our clients. Cpanel is most clients friendly control panel we provide that for free.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+                <div class="service-item">
+                     <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>Daily Offsite Backups</h3>
+                    <p>We provide daily backups of our clients for completely free.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+                <div class="service-item">
+                     <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>Latest Technology</h3>
+                    <p>Latest and best technology for our clients for free.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>Public Cloud</h3>
+                    <p>The beginner and budget friendly package for hosting single page websites, personal portfolios, etc.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+                <div class="service-item">
+                   <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>Cloud VPS</h3>
+                    <p>Managed Cloud VPS packages with KVM virtualization with Dedicated Resources and Dedicated IP address.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+                <div class="service-item">
+                     <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>Reseller Hosting</h3>
+                    <p>The ideal package to start your own web hosting company or web hosting agency with minimum investments.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+                <div class="service-item">
+                     <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>Email Hosting</h3>
+                    <p>Business Email Hosting Package for effective and professional email communication with your customers.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+                <div class="service-item">
+                     <div class="service-icon"><img class="w-100" src="https://i.postimg.cc/VLf6w26c/7975455.webp" alt="ok"></img></div>
+                    <h3>DDOS Protection +</h3>
+                    <p>Advanced DDOS protection can be added on our Elite/VPS hosting to handle large DDOS attacks.</p>
+                    <a href="#" class="view-details">View Details →</a>
+                </div>
+            </div>
+     
+     
+     
+     
+     
+     
+     
+    </section>
+    
+
+
+
+
+
+<!-- new sld -->
+
+
+
+
+
+
+
+
+
+     <section class="scn">
+    <div class="container-fluid">
+      <div class="container d-flex gap-2">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="cardm text-center">
+              <div class="tls">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                <h2>Shared
+Web Hosting</h2>
+              </div>
+              <div class="price">
+                <h4><sup>₹</sup>45</h4>
+               <p class="text-white">Packed with great features, such as oneclick software installs,24/7 support , FREE SEO TOOL ( soon )</p>
+              </div>
+              <div class="option">
+                <ul>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>Single Website Host</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>2GB NVME SSD</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>Unlimited Bandwidth</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>5 Email Accounts</li>
+                  
+                <li><i class="fa fa-check" aria-hidden="true"></i>5 MySql Databases</li>
+                  
+                <li><i class="fa fa-check" aria-hidden="true"></i>Free Let's Encrypt SSL</li>
+                  
+                <li><i class="fa fa-check" aria-hidden="true"></i>5 Subdomains</li>
+                  
+                <li><i class="fa fa-check" aria-hidden="true"></i>PHP Version Selector</li>
+                  
+                <li><i class="fa fa-check" aria-hidden="true"></i>24*7 Technical Support</li>
+                  
+                 
+                <li><i class="fa fa-check" aria-hidden="true"></i>Money Back With In 7 days</li>
+                  
+              
+           
+                <li><i class="fa fa-check" aria-hidden="true"></i>Free SEO Tool ( soon )</li>
+                  
+              
+        
+                                          
+                  
+                </ul>
+              </div>
+              <a href="#">Order Now</a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="cardm text-center">
+              <div class="tls">
+                <i class="fa fa-plane" aria-hidden="true"></i>
+                <h2>Standard</h2>
+              </div>
+              <div class="price">
+                <h4><sup>$</sup>50</h4>
+              </div>
+              <div class="option">
+                <ul>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>50 GB Space</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>5 Domain Names</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>unlimited Email Address</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>Live Support</li>
+                </ul>
+              </div>
+              <a href="#">Order Now</a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="cardm text-center">
+              <div class="tls">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+                <h2>Premium</h2>
+              </div>
+              <div class="price">
+                <h4><sup>$</sup>100</h4>
+              </div>
+              <div class="option">
+                <ul>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>Unlimited GB Space</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>30 Domain Names</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>Unlimited Email Address</li>
+                  <li><i class="fa fa-check" aria-hidden="true"></i>Live Support</li>
+                </ul>
+              </div>
+              <a href="#">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>       
+
+<div class="w-100 flex flex-wrap text-center">
+    
+    <div class="card rounded text-bg-primary mb-3 bg-light bg-gradient" style="max-width: 18rem;">
+  <div class="avtar m-2 "><img class="rounded-circle border border-2 border-warning" src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg" alt=""></div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold text-capitalize">Raushan Shah</h5>
+   <p class="p-0">⭐⭐⭐⭐⭐</p>
+    <p class="card-text">I got Super fast loading Speed on my website also a great support to publish my website rytehost is a good choice for wordpress users.</p>
+  </div>
+</div>
+
+
+  
+    <div class="card rounded text-bg-primary mb-3 bg-light bg-gradient" style="max-width: 18rem;">
+  <div class="avtar m-2 "><img class="rounded-circle border border-2 border-warning" src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg" alt=""></div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold text-capitalize">Raushan Shah</h5>
+   <p class="p-0">⭐⭐⭐⭐⭐</p>
+    <p class="card-text">I got Super fast loading Speed on my website also a great support to publish my website rytehost is a good choice for wordpress users.</p>
+  </div>
+</div>
+
+
+  
+    <div class="card rounded text-bg-primary mb-3 bg-light bg-gradient" style="max-width: 18rem;">
+  <div class="avtar m-2 "><img class="rounded-circle border border-2 border-warning" src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg" alt=""></div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold text-capitalize">Raushan Shah</h5>
+   <p class="p-0">⭐⭐⭐⭐⭐</p>
+    <p class="card-text">I got Super fast loading Speed on my website also a great support to publish my website rytehost is a good choice for wordpress users.</p>
+  </div>
+</div>
+
+
+  
+    <div class="card rounded text-bg-primary mb-3 bg-light bg-gradient" style="max-width: 18rem;">
+  <div class="avtar m-2 "><img class="rounded-circle border border-2 border-warning" src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg" alt=""></div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold text-capitalize">Raushan Shah</h5>
+   <p class="p-0">⭐⭐⭐⭐⭐</p>
+    <p class="card-text">I got Super fast loading Speed on my website also a great support to publish my website rytehost is a good choice for wordpress users.</p>
+  </div>
+</div>
+
+
+  
+    <div class="card rounded text-bg-primary mb-3 bg-light bg-gradient" style="max-width: 18rem;">
+  <div class="avtar m-2 "><img class="rounded-circle border border-2 border-warning" src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg" alt=""></div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold text-capitalize">Raushan Shah</h5>
+   <p class="p-0">⭐⭐⭐⭐⭐</p>
+    <p class="card-text">I got Super fast loading Speed on my website also a great support to publish my website rytehost is a good choice for wordpress users.</p>
+  </div>
+</div>
+
+
+  
+    <div class="card rounded text-bg-primary mb-3 bg-light bg-gradient" style="max-width: 18rem;">
+  <div class="avtar m-2 "><img class="rounded-circle border border-2 border-warning" src="https://codingyaar.com/wp-content/uploads/bootstrap-profile-card-image.jpg" alt=""></div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold text-capitalize">Raushan Shah</h5>
+   <p class="p-0">⭐⭐⭐⭐⭐</p>
+    <p class="card-text">I got Super fast loading Speed on my website also a great support to publish my website rytehost is a good choice for wordpress users.</p>
+  </div>
+</div>
+
+
+
+
+</div>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-light">
+     <div class="container">
+         <div class="row">
+             <!-- widget -->
+             <div class="col-lg-3 col-md-5 col-sm-6">
+                 <div class="rts-footer__widget footer__widget w-280">
+                     <a href="" class="footer__logo">
+                         <img class="w-75 mb-4" src="https://rytehost.net/assets/img/rytehostlogo.png" alt="sitecountry">
+                    </a>
+                     <p class="brand-desc">On a mission to provide affordable and fast website hosting all over the
+                         world. Join us today!
+                     </p>
+                     <div class="separator site-default-border"></div>
+                     <div class="payment__method">
+                         <a href="//payment-method/">
+                             <h5>Payment Methods</h5>
+                         </a>
+                         <ul>
+                            
+               <p>addind soon</p>             
+                            
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <!-- widget end -->
+
+             <!-- widget -->
+             <div class="col-lg-2 col-md-6 col-sm-6 rts-footer__widget--column">
+                 <div class="rts-footer__widget footer__widget">
+                     <h5 class="widget-title">Hosting</h5>
+                     <div class="rts-footer__widget--menu">
+                         <ul>
+                             <li><a href=" /premium-cloud/">Premium Cloud</a></li>
+                             <li><a href=" /elite-cloud/">Elite Cloud</a></li>
+                             <li><a href=" /reseller-hosting/">Reseller Hosting</a></li>
+                             <li><a href=" /cloud-vps/">Cloud VPS Hosting</a></li>
+                             <li><a href=" /dedicated-servers/">Dedicated Hosting</a></li>
+                             <li><a href=" /public-cloud/">Public Cloud</a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <!-- widget end -->
+             <!-- widget -->
+             <div class="col-lg-2 col-md-4 col-sm-6 rts-footer__widget--column">
+                 <div class="rts-footer__widget footer__widget extra-padding">
+                     <h5 class="widget-title"> Services</h5>
+                     <div class="rts-footer__widget--menu ">
+                         <ul>
+                             <li><a href=" /domain-search/">Domain Registration</a></li>
+                             <li><a href=" /domain-transfer/">Domain Transfer</a></li>
+                             <li><a href=" /email-hosting/">Business Email</a></li>
+                             <li><a href=" /affiliate/">Affiliate Program</a></li>
+                             <li><a href=" /ddos-protection/">DDOS Protection +</a></li>
+                             <li><a href=" /migration/">Free Migration</a></li>
+
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <!-- widget end -->
+
+             <!-- widget -->
+             <div class="col-lg-2 col-md-4 col-sm-6 rts-footer__widget--column">
+                 <div class="rts-footer__widget footer__widget extra-padding">
+                     <h5 class="widget-title">Company</h5>
+                     <div class="rts-footer__widget--menu ">
+                         <ul>
+                             <li><a href=" /about-us/">About Us</a></li>
+                             <li><a href=" /tos/">Terms of Service</a></li>
+                             <li><a href=" /refund-policy/">Refund Policy</a></li>
+                             <li><a href=" /privacy-policy/">Privacy Policy</a></li>
+                             <li><a href=" /affiliates-policy/">Affiliate Policy</a></li>
+                             <li><a href=" /payment-method/">Payment Methods</a></li>
+
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <!-- widget end -->
+             <!-- widget -->
+             <div class="col-lg-2 col-md-3 col-sm-6 rts-footer__widget--column">
+                 <div class="rts-footer__widget footer__widget extra-padding">
+                     <h5 class="widget-title">Help</h5>
+                     <div class="rts-footer__widget--menu ">
+                         <ul>
+                             <li><a href=" /support/">Support</a></li>
+                             <li><a target="_blank" href="https://kb.sitecountry.com/">Knowledge Base</a></li>
+                             <li><a href="javascript:void(Tawk_API.toggle())">Live Chat</a></li>
+                             <li><a target="_blank" href="https://dash.sitecountry.com/index.php?/supportfields/selectdepartment/">Submit a Ticket</a></li>
+                             <li><a target="_blank" href="https://dash.sitecountry.com/index.php?/clientarea/">Client Login</a></li>
+                             <li><a target="_blank" href="https://blog.sitecountry.com/">Blog</a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <!-- widget end -->
+
+             <!-- widget -->
+             <!-- <div class="col-lg-3 col-md-6 rts-footer__widget--column">
+                 <div class="rts-footer__widget footer__widget">
+                     <h5 class="widget-title">Join Our Newsletter</h5>
+                     <p>We'll send you news and offers.</p>
+                     <form action="#" class="newsletter mx-40">
+                         <input type="email" class="home-one" name="email" placeholder="Enter mail" required>
+                         <span class="icon"><i class="fa-regular fa-envelope-open"></i></span>
+                         <button type="submit"><i class="fa-regular fa-arrow-right"></i></button>
+                     </form>
+                     <div class="social__media">
+                         <h5>social media</h5>
+                         <div class="social__media--list">
+                             <a href="#" class="media"><i class="fa-brands fa-facebook-f"></i></a>
+                             <a href="#" class="media"><i class="fa-brands fa-instagram"></i></a>
+                             <a href="#" class="media"><i class="fa-brands fa-linkedin"></i></a>
+                             <a href="#" class="media"><i class="fa-brands fa-x-twitter"></i></a>
+                             <a href="#" class="media"><i class="fa-brands fa-behance"></i></a>
+                         </div>
+                     </div>
+                 </div>
+             </div> -->
+             <!-- widget end -->
+         </div>
+     </div>
+     <div class="container">
+         <div class="row">
+             <div class="rts-footer__copyright text-center">
+                 <p>© Copyright 2024. All Rights Reserved | Prices mentioned are without taxes</p>
+             </div>
+         </div>
+     </div>
+ </footer>
+
+
+
+<script>
+window.addEventListener('scroll', function () {
+    const scrollValue = window.scrollY;
+    const rocket = document.querySelector('.rocket');
+    rocket.style.transform = `translate(${scrollValue / .6}px, -${scrollValue / 1}px) rotate(${scrollValue / 10}deg)`;
+});
+
+const timerElement = document.getElementById('timer');
+let timeLeft = 300; // 5 minutes in seconds
+
+function updateTimer() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        timerElement.textContent = '00:00';
+    }
+    timeLeft--;
+}
+
+const timerInterval = setInterval(updateTimer, 1000);
+updateTimer();
+
+</script>
+
+
