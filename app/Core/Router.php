@@ -1,0 +1,3 @@
+<?php
+namespace App\Core;
+final class Router { private array $routes=[]; public function get($p,$a,$m=[]){$this->add('GET',$p,$a,$m);} public function post($p,$a,$m=[]){$this->add('POST',$p,$a,$m);} private function add($method,$path,$action,$middleware){$this->routes[] = compact('method','path','action','middleware');} public function dispatch(Request $r): mixed { foreach($this->routes as $route){$pattern=preg_replace('#\{[a-zA-Z_]+\}#','([^/]+)',$route['path']); if($route['method']===$r->method && preg_match('#^'.$pattern.'$#',$r->path,$m)){array_shift($m); foreach($route['middleware'] as $mw) Auth::require($mw); [$c,$fn]=$route['action']; return (new $c)->$fn($r,...$m);} } http_response_code(404); return (new Controller)->view('errors/404'); } }

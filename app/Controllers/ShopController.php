@@ -1,0 +1,4 @@
+<?php
+namespace App\Controllers;
+use App\Core\{Controller,Request}; use App\Models\{Product,Category};
+class ShopController extends Controller { public function home(Request $r){return $this->view('shop/home',['products'=>(new Product)->browse($r->input),'categories'=>(new Category)->all('status="active"')]);} public function product(Request $r,string $slug){$p=(new Product)->all('slug=?',[$slug])[0]??null; return $p?$this->view('shop/product',['product'=>$p]):$this->view('errors/404');} public function cart(Request $r){return $this->view('shop/cart',['cart'=>$_SESSION['cart']??[]]);} public function addCart(Request $r){\App\Core\Csrf::check($r->get('_csrf')); $p=(new Product)->find((int)$r->get('product_id')); if($p) $_SESSION['cart'][$p['id']]=['id'=>$p['id'],'vendor_id'=>$p['vendor_id'],'name'=>$p['name'],'price'=>$p['sale_price']?:$p['price'],'qty'=>(int)$r->get('qty',1)]; return $this->redirect('/cart');} }

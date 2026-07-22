@@ -1,0 +1,4 @@
+<?php
+namespace App\Controllers;
+use App\Core\{Controller,Request,Auth,Csrf,Database};
+class AuthController extends Controller { public function login(){return $this->view('auth/login');} public function doLogin(Request $r){Csrf::check($r->get('_csrf')); if(Auth::attempt($r->get('email'),$r->get('password'))){$role=Auth::user()['role']; return $this->redirect($role==='admin'?'/admin':($role==='vendor'?'/vendor':'/customer'));} return $this->view('auth/login',['error'=>'Invalid credentials']);} public function register(){return $this->view('auth/register');} public function doRegister(Request $r){Csrf::check($r->get('_csrf')); Database::pdo()->prepare('insert into users(name,email,password,role,status) values(?,?,?,?,"active")')->execute([$r->get('name'),$r->get('email'),password_hash($r->get('password'),PASSWORD_DEFAULT),$r->get('role','customer')]); return $this->redirect('/login');} public function logout(){Auth::logout(); return $this->redirect('/');} }

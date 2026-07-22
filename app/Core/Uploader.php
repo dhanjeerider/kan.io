@@ -1,0 +1,3 @@
+<?php
+namespace App\Core;
+final class Uploader { public static function image(array $file,string $dir='products'): string { if(($file['error']??UPLOAD_ERR_NO_FILE)!==UPLOAD_ERR_OK) throw new \RuntimeException('Upload failed'); $finfo=finfo_open(FILEINFO_MIME_TYPE); $mime=finfo_file($finfo,$file['tmp_name']); if(!in_array($mime,['image/jpeg','image/png','image/webp'],true) || $file['size']>5_000_000) throw new \RuntimeException('Invalid image'); $ext=['image/jpeg'=>'jpg','image/png'=>'png','image/webp'=>'webp'][$mime]; $name=$dir.'/'.bin2hex(random_bytes(16)).'.'.$ext; $target=dirname(__DIR__,2).'/storage/uploads/'.$name; is_dir(dirname($target))||mkdir(dirname($target),0775,true); move_uploaded_file($file['tmp_name'],$target); return $name; } }

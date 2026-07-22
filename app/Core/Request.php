@@ -1,0 +1,3 @@
+<?php
+namespace App\Core;
+final class Request { public function __construct(public string $method, public string $path, public array $input, public array $files, public array $headers){} public static function capture(): self { $path=parse_url($_SERVER['REQUEST_URI']??'/', PHP_URL_PATH) ?: '/'; $headers=function_exists('getallheaders')?getallheaders():[]; return new self($_SERVER['REQUEST_METHOD']??'GET',$path,array_merge($_GET,$_POST),$_FILES,$headers); } public function get(string $key,mixed $default=null): mixed { return $this->input[$key] ?? $default; } public function only(array $keys): array { return array_intersect_key($this->input,array_flip($keys)); } }

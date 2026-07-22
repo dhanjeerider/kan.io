@@ -1,0 +1,4 @@
+<?php
+namespace App\Models;
+use App\Core\{Model,Database};
+class Product extends Model { protected string $table='products'; public function browse(array $filters=[]): array { $sql='select p.*, c.name category_name, v.store_name from products p join categories c on c.id=p.category_id join vendors v on v.id=p.vendor_id where p.status="active"'; $params=[]; if(!empty($filters['q'])){$sql.=' and (p.name like ? or p.description like ?)';$params[]='%'.$filters['q'].'%';$params[]='%'.$filters['q'].'%';} if(!empty($filters['category'])){$sql.=' and c.slug=?';$params[]=$filters['category'];} $sql.=' order by '.(in_array($filters['sort']??'', ['price','name','created_at'],true)?$filters['sort']:'created_at').' desc limit 60'; $s=Database::pdo()->prepare($sql);$s->execute($params);return $s->fetchAll(); } }

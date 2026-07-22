@@ -1,0 +1,4 @@
+<?php
+namespace App\Models;
+use App\Core\{Model,Database};
+class Order extends Model { protected string $table='orders'; public function createFromCart(int $userId,array $cart,string $payment): int { $db=Database::pdo(); $db->beginTransaction(); $total=0; foreach($cart as $i) $total += $i['price']*$i['qty']; $commission=$total*0.10; $id=$this->create(['user_id'=>$userId,'number'=>'ORD'.date('YmdHis').random_int(100,999),'status'=>'pending','payment_status'=>'pending','shipping_status'=>'pending','payment_method'=>$payment,'total'=>$total,'commission_total'=>$commission]); foreach($cart as $i){$db->prepare('insert into order_items(order_id,product_id,vendor_id,quantity,price,total,commission) values(?,?,?,?,?,?,?)')->execute([$id,$i['id'],$i['vendor_id'],$i['qty'],$i['price'],$i['price']*$i['qty'],($i['price']*$i['qty'])*0.10]);} $db->commit(); return $id; } }

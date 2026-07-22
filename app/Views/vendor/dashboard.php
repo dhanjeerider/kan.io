@@ -1,0 +1,1 @@
+<div class="container"><h1>Vendor dashboard</h1><div class="row"><div class="col"><div class="stat">Products <b><?=count($products)?></b></div></div><div class="col"><div class="stat">Orders <b><?=count($orders)?></b></div></div></div><a href="/vendor/products" class="btn btn-primary mt-3">Manage products</a></div>

@@ -1,0 +1,1 @@
+<div class="container"><h1>My account</h1><h2>Order history</h2><?php foreach($orders as $o): ?><div class="border-bottom py-2"><?=e($o['number'])?> <?=e($o['status'])?> $<?=e($o['total'])?></div><?php endforeach ?></div>
